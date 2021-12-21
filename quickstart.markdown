@@ -1,0 +1,63 @@
+---
+layout: page
+title: Quick Start
+permalink: /quickstart/
+nav_order: 2
+---
+# Prerequisites
+
+## Hardware requirement
+
+To use Sonica for over-the-air communication with NB-IoT devices,
+you need an RF front-end connected. Sonica has been tested with the
+following hardware:
+
+* USRP B200, B210
+* USRP X300, X310
+
+## Installing dependencies
+
+The main dependencies of Sonica include:
+* meson (build system)
+* cmake
+* FFTW
+* MbedTLS
+* Boost (Program Options module)
+* libconfig (C++ API)
+* libsctp
+* RF libraries (e.g. UHD for USRP, ZeroMQ for simulation testing, etc.)
+
+To install meson, view https://mesonbuild.com/Getting-meson.html
+
+To install other main dependencies on ubuntu (RF libraries not included here):
+
+```sh
+$ sudo apt-get install build-essential cmake libfftw3-dev \
+   libmbedtls-dev libboost-program-options-dev libconfig++-dev \
+   libsctp-dev
+```
+
+Building
+========
+To build Sonica, execute the following commands
+
+```sh
+[sonica]$ meson builddir
+[sonica]$ cd builddir
+[sonica/builddir]$ meson compile
+```
+
+The two binary programs are located within 'builddir' directory:
+* eNodeB: `sonica_enb/sonica_enb`
+* EPC: `third_party/srsepc_ciot/src/srsepc_ciot`
+
+Configuration
+=============
+Copy all the files in the `example-config` directory to one of the two locations before running:
+* /etc/sonica/ (System-wide configuration)
+* ~/.config/sonica (User-specific configuration directory)
+
+Running
+=======
+To run the eNodeB, first plug in the RF device (e.g. USRP), then launch EPC
+and eNodeB program in sequence.
