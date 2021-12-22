@@ -15,4 +15,5 @@ nav_order: 99
 
 - Steering Members
   - [Songwu Lu](https://web.cs.ucla.edu/~slu)
+  - [Zhaowei Tan](https://web.cs.ucla.edu/~tan)
 
