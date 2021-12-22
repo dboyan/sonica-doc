@@ -27,7 +27,7 @@ The main dependencies of Sonica include:
 * libsctp
 * RF libraries (e.g. UHD for USRP, ZeroMQ for simulation testing, etc.)
 
-To install meson, view https://mesonbuild.com/Getting-meson.html
+To install meson, view <https://mesonbuild.com/Getting-meson.html>
 
 To install other main dependencies on ubuntu (RF libraries not included here):
 
@@ -37,15 +37,24 @@ $ sudo apt-get install build-essential cmake libfftw3-dev \
    libsctp-dev
 ```
 
+Sonica does not require using certain specific Linux distribution.
+It is tested on Ubuntu 20.04 and Arch Linux.
+
 Building
 ========
-To build Sonica, execute the following commands
+To build Sonica, execute the following commands:
 
 ```sh
 [sonica]$ meson builddir
 [sonica]$ cd builddir
 [sonica/builddir]$ meson compile
 ```
+
+The first line runs the meson configuration script and creates the
+subdirectory `builddir` for compilation. In most cases, this only need to
+be run once. Subsequent rebuilds only needs `meson compile` in `builddir`
+since meson can automatically detect the changes in source files or even
+build scripts themselves.
 
 The two binary programs are located within 'builddir' directory:
 * eNodeB: `sonica_enb/sonica_enb`
@@ -59,5 +68,20 @@ Copy all the files in the `example-config` directory to one of the two locations
 
 Running
 =======
-To run the eNodeB, first plug in the RF device (e.g. USRP), then launch EPC
-and eNodeB program in sequence.
+Before running the eNodeB, plug in the RF device (e.g. USRP). 
+
+After that, first launch the EPC (need root privilege). 
+
+```sh
+[sonica/builddir]$ sudo ./third_party/srsepc_ciot/src/srsepc_ciot
+```
+
+For IP forwarding, use `third_party/srsepc_ciot/srsepc_if_masq.sh`
+to configure. Then launch eNodeB
+
+```sh
+[sonica/builddir]$ sonica_enb/sonica_enb
+```
+
+If successful, EPC and eNodeB should both print information on the connection
+and the eNodeB will start its processing.
