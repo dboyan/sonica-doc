@@ -68,9 +68,9 @@ Copy all the files in the `example-config` directory to one of the two locations
 
 Running
 =======
-Before running the eNodeB, plug in the RF device (e.g. USRP). 
+Before running the eNodeB, plug in the RF device (e.g. USRP).
 
-After that, first launch the EPC (need root privilege). 
+After that, first launch the EPC (need root privilege).
 
 ```sh
 [sonica/builddir]$ sudo ./third_party/srsepc_ciot/src/srsepc_ciot
