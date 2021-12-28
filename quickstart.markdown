@@ -70,14 +70,17 @@ Running
 =======
 Before running the eNodeB, plug in the RF device (e.g. USRP).
 
-After that, first launch the EPC (need root privilege).
+After that, first launch the EPC (need root privilege):
+
 
 ```sh
 [sonica/builddir]$ sudo ./third_party/srsepc_ciot/src/srsepc_ciot
 ```
 
-For IP forwarding, use `third_party/srsepc_ciot/srsepc_if_masq.sh`
-to configure. Then launch eNodeB
+For IP forwarding of EPC network, use `third_party/srsepc_ciot/srsepc_if_masq.sh`
+to configure. In most cases, it only needs to be executed once per boot.
+
+Finally, launch eNodeB with:
 
 ```sh
 [sonica/builddir]$ sonica_enb/sonica_enb
