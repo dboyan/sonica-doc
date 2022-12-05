@@ -93,3 +93,10 @@ Finally, launch eNodeB with:
 
 If successful, EPC and eNodeB should both print information on the connection
 and the eNodeB will start its processing.
+
+Tested devices
+==============
+
+Sonica has been tested with the following devices
+* [Quectel BG96](https://www.quectel.com/product/lpwa-bg96-cat-m1-nb1-egprs) (e.g. [P-L496G-CELL02 Evaluation Board](https://www.st.com/en/evaluation-tools/p-l496g-cell02.html))
+* [Telit ME910G1](https://www.telit.com/devices/me910g1-series/)
