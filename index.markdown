@@ -29,3 +29,8 @@ on various layers of the NB-IoT network.
 * Allow construction of custom nodes for analytics and security research
 * Quick protytyping of NB-IoT RAN algorithms
 
+## Getting Sonica
+
+To get the latest release of Sonica, please visit the [download page](http://metro.cs.ucla.edu/codeshare.html).
+The [archive repo](https://github.com/sonica-nbiot/sonica) contains a trial version with basic features.
+

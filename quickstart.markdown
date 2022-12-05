@@ -15,6 +15,11 @@ following hardware:
 * USRP B200, B210
 * USRP X300, X310
 
+## Getting Sonica
+
+To get the latest release of Sonica, please visit the [download page](http://metro.cs.ucla.edu/codeshare.html).
+The [archive repo](https://github.com/sonica-nbiot/sonica) contains a trial version with basic features.
+
 ## Installing dependencies
 
 The main dependencies of Sonica include:
