@@ -7,7 +7,13 @@ nav_order: 21
 
 # Roadmap for Future Releases
 
-## Release 2.1 (Jan 2023)
+## Planned features for Q1 2023
 
-* eNodeB MAC layer improvements:
+* eNodeB MAC layer:
   - Configurable MCS for uplink and downlink transmissions
+  - UL retransmission
+  - DL HARQ handling
+* eNodeB PHY layer:
+  - Support for NPUSCH Format 2
+* EPC improvement:
+  - Improve message support for more devices
